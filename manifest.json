@@ -1,6 +1,6 @@
 {
-    "short_name": "Quizziy",
-    "name": "quizziy trivia app",
+    "short_name": "CloseWeUI",
+    "name": "The front-end UI for CloseWe",
     "icons": [
       {
         "src": "favicon.ico",
