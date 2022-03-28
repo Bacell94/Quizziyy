@@ -16,7 +16,7 @@ export default function App() {
     const [quizArray, setQuizArray] = React.useState([])
     const [loading, setLoading] =  React.useState(false)
     const [startForm, setStartForm] = React.useState({
-        difficulty: '',
+        difficulty: '&difficulty=easy',
         category: '',
         amount: 'amount=5'
     })
