@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    font-family: Inter , sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+    color: #293264;
+    background: #F5F7FB;
+}
+.start {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+h1 {
+    margin-bottom: 0px;
+}
+h5 {
+    margin-bottom: 0px;
+    margin-right: 15px;
+}
+label{
+    font-weight: 600;
+}
+select{
+    margin: 10px 0 30px 0;
+    border-radius: 5px;
+    padding: 10px 40px;
+    border: 1px solid #293264;
+    background-color: #D6DBF5;   
+}
+option{
+    font-weight: 500;
+}
+.blue-button {
+    margin-top: 30px;
+    align-self: center;
+    cursor: pointer;
+    color: #F5F7FB;
+    background-color: #4D5B9E;
+    border: none;
+    max-width: 200px;
+    border-radius: 15px;
+    padding: 0px 40px;
+}
+.back{
+    background: transparent;
+    border: none;
+    color: #4D5B9E;
+    font-size: 40px;
+    align-self: flex-start;
+    order: -1;
+}
+.check-answers {
+    font-weight: 500;
+    padding: 10px 40px;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.disappear {
+    animation-name: disappear;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes disappear {
+    100%{color: transparent; background-color: transparent;}
+}
+.button-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.blobB {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 0px;
+    right: 0px;
+}
+.move-blobB {
+    animation-name: blobB;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+} 
+@keyframes blobB {
+    100% {width: 100px; height:100px}
+}
+.blobA {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 0px;
+    left: 0px;
+    
+}
+.move-blobA {
+    animation-name: blobA;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes blobA {
+    100% {width: 75px; height:75px}
+}
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    padding:0px 30px ;
+}
+.choice {
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    color: #293264;
+    background: transparent;
+    border: 1px solid #4D5B9E;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.choice-selected {
+    background-color: #D6DBF5;
+    border-color: #D6DBF5;
+}
+.choice-wrong {
+    animation-name: reveal-wrong;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.choice-right {
+    animation-name: reveal-right;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.question {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: 1px solid  #DBDEF0;
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+    0%{ 
+        color: transparent; 
+        background-color: transparent;
+        border-color: transparent;
+    } 
+}
+@keyframes reveal-right {
+    100%{
+        background-color: #94D7A2;
+        border-color: #94D7A2;
+    } 
+}
+@keyframes reveal-wrong {
+    100%{
+        background-color: #F8BCBC;
+        border-color: #F8BCBC;
+    }
+}
+/* ___________SPINNER__________________ */
+@keyframes spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .spinner-container{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 50vh;
+  }
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #383636;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }
